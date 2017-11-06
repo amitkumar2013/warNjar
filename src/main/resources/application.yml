@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: dev
+    
+logging: 
+  path: logs
+  file: ${logging.path}/log.log
+  pattern.file: '%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n' 
+  
+connection: 
+  jndiName:  jdbc/myDataSource
+
+---
+
+spring:
+    profiles: dev
+
+logging:
+  level.root: debug
+  
+connection:
+  url:  jdbc://localhost:3306/testdb
+  username:  amit
+  password:  amit
+  driverClassName:  com.mysql.jdbc.Driver
+  
+---
+
+spring: 
+    profiles: prod
+
+logging:
+  level.root: info   
