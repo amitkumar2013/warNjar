@@ -24,11 +24,6 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-dbcp</artifactId>
-			<version>${tomcat.version}</version>
-		</dependency>
 	</dependencies>
 
 	<properties>
@@ -62,6 +57,11 @@
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-tomcat</artifactId>
 				</dependency>
+				<dependency>
+					<groupId>org.apache.tomcat</groupId>
+					<artifactId>tomcat-dbcp</artifactId>
+					<version>${tomcat.version}</version>
+				</dependency>
 			</dependencies>
 		</profile>
 		<profile>
@@ -78,6 +78,12 @@
 				<dependency>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-tomcat</artifactId>
+					<scope>provided</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.tomcat</groupId>
+					<artifactId>tomcat-dbcp</artifactId>
+					<version>${tomcat.version}</version>
 					<scope>provided</scope>
 				</dependency>
 			</dependencies>
